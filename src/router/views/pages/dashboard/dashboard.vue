@@ -77,7 +77,44 @@ export default {
 	height:226px;
 }
 .senderid-card-inner{
-	height:678px;
+	margin-top:10em;
+}
+.messages-text,.amount-text{
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 13px;
+	text-transform: capitalize;
+	color: #484A4F;
+}
+.messages-round{
+	width: 11.62px;
+	height: 11.34px;
+	background: #30A1F0;
+	border-radius: 11px;
+	display:inline-block;	
+	margin-right:10px;
+}
+.amount-round{
+	width: 10.46px;
+	height: 10.34px;
+	background: #6D22F2;
+	border-radius: 10px;
+	display:inline-block;
+	margin-right:10px;
+}
+#side-indicators-content{
+	display:flex;
+	justify-content: space-between;
+}
+.side-indicators{
+	display:flex;
+	align-items:center;
+}
+.message-padding{
+	margin-right: 2em;
+}
+.side-indicators p{
+	margin-bottom:0px!important;
 }
 </style>
 <template>
@@ -121,11 +158,15 @@ export default {
 				<div class="row">
 					<div class="col-12">
 						<div class="billing-summary mnotify-card">
-							<div class="mnotify-card-header">
+							<div  id="side-indicators-content" class="mnotify-card-header">
 								<h3 class="mnotify-card-header-text">Billing summary</h3>
+								<div class="side-indicators">
+									<p 	class="message-padding"><span class="messages-round"></span> <span class="messages-text">messages</span></p>
+									<p><span class="amount-round"></span> <span class="amount-text">amount</span></p>
+								</div>
 							</div>
 							<div class="mnotify-card-body">
-								<div class="billing-card-inner">
+								<div class="billing-card-inner" >
 									<div class="no-data">
 										<h3 class="no-data-header">No data avalaible</h3>
 										<p class="no-data-text">Send messages to view data</p>

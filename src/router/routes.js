@@ -68,13 +68,14 @@ const authRoutes = [
       authRequired: true,
       beforeResolve(routeTo, routeFrom, next) {
         store.dispatch('auth/logOut')
-        const authRequiredOnPreviousRoute = routeFrom.matched.some(
+        next({ name: 'signin', query: { redirectFrom: routeTo.fullPath } })
+       /* const authRequiredOnPreviousRoute = routeFrom.matched.some(
           (route) => route.meta.authRequired
         )
         // Navigate back to previous page, or home as a fallback
         next(
           authRequiredOnPreviousRoute ? { name: 'overview' } : { ...routeFrom }
-        )
+        ) */
       },
     },
   },
@@ -118,6 +119,14 @@ const dashboardRoutes = [
   },
 ]
 
+// PROFILE & ACCOUNT SETTINGS ROUTES
+const profileSettingsRoutes = [
+  {
+    path:'/profile',
+    meta: {authRequired: true},
+    component: () => lazyLoadView(import('@src/views/dashboard/profile/index.vue')),
+  }
+]
 const messagesRoutes = [
   {
     path: '/messages',
@@ -143,7 +152,12 @@ const contactRoutes = [
 const authProtectedRoutes = [
   ...dashboardRoutes,...contactRoutes, ...messagesRoutes
 ]
-const allRoutes = [...authRoutes, ...authProtectedRoutes, ...errorPagesRoutes]
+const allRoutes = [
+  ...authRoutes, 
+  ...authProtectedRoutes, 
+  ...errorPagesRoutes,
+  ...profileSettingsRoutes
+]
 
 export { allRoutes, authProtectedRoutes }
 

@@ -85,7 +85,7 @@ export default {
                 if(err.response.data == undefined) {
                   this.errors.push("An error occured try again.")
                 }
-                if(err.response.status === 404) {
+                if(err.response && err.response.status === 404) {
                   this.errors = Object.values(err.response.data.data);
                 }
               })

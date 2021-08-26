@@ -124,12 +124,11 @@ export default {
 							Rebecca  <i class="fas fa-chevron-down" style="font-size:18px !important; padding-top:5px; padding-left:7px;"></i>
 						</button>
 					</template>
-					<b-dropdown-item href="#">Profile</b-dropdown-item>
+					<b-dropdown-item href="/profile">Profile</b-dropdown-item>
 					<b-dropdown-item href="#">Settings</b-dropdown-item>
 					<b-dropdown-item href="#">Developer</b-dropdown-item>
-					<b-dropdown-item href="#">Logout</b-dropdown-item>
+					<b-dropdown-item href="/logout">Logout</b-dropdown-item>
 				</b-nav-item-dropdown>
-			
 			</ul>
 		</div>
 	</div>

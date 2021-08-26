@@ -1,6 +1,5 @@
 <script>
 import appConfig from '@src/app.config'
-
 export default {
   page: {
     // All subcomponent titles will be injected into this template.
@@ -477,7 +476,7 @@ letter-spacing: 0em;
   height: 100%;
 }
 .page__padding{
-  margin-top:4em;
+  margin-top:3em;
   margin-right:3em;
   margin-left:3em;
 }
@@ -486,7 +485,8 @@ letter-spacing: 0em;
   background: #FFFFFF;
   border-radius: 5px;
   margin-bottom:2em;
-  padding:17px 24px;
+  padding-right:24px;
+  padding-left:24px;
 }
 .mnotify-card-header{
   padding-top:17px;

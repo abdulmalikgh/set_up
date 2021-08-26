@@ -90,6 +90,12 @@ export default {
             store.dispatch('auth/login', this.formData)
               .then( response => {
                 this.loading = false
+                this.$notify({
+                    title: 'Success',
+                    message: response.data.message,
+                    type: 'success'
+                  });
+                this.$router.push('/overview');
               })
               .catch( err => {
                 this.loading = false
