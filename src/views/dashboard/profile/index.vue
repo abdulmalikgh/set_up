@@ -1,11 +1,7 @@
 <script>
 import appConfig from '@src/app.config'
-import Layout from '@layouts/main'
-
 export default ({
-    components: {
-		Layout:Layout
-	},
+   name:'profie-home',
     page: {
 		title: 'Account-settings',
 		meta: [{ name: 'description', content: appConfig.description }],
@@ -105,7 +101,7 @@ a{
 }
 </style>
 <template>
-    <Layout style="background-color:#FBFBFB">
+
         <div class="row justify-content-between page-title align-items-center">
             <div class="col-sm-12 col-md-5 col-lg-4 col-xl-3">
 

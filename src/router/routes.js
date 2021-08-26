@@ -123,8 +123,18 @@ const dashboardRoutes = [
 const profileSettingsRoutes = [
   {
     path:'/profile',
+    name: 'profile',
+    redirect:{ name:'settings'},
     meta: {authRequired: true},
-    component: () => lazyLoadView(import('@src/views/dashboard/profile/index.vue')),
+    component: () => lazyLoadView(import('@src/views/dashboard/profile/profile.vue')),
+    children: [
+      {
+        path:'/profile-settings',
+        name:'settings',
+        meta: {authRequired: true},
+        component: () => lazyLoadView(import('@src/views/dashboard/profile/index.vue')),
+      }
+    ]
   }
 ]
 const messagesRoutes = [
