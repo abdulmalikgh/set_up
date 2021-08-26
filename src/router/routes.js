@@ -133,6 +133,12 @@ const profileSettingsRoutes = [
         name:'settings',
         meta: {authRequired: true},
         component: () => lazyLoadView(import('@src/views/dashboard/profile/index.vue')),
+      },
+      {
+        path:'/change-password',
+        name:'changepassword',
+        meta: {authRequired: true},
+        component: () => lazyLoadView(import('@src/views/dashboard/profile/changepassword.vue')),
       }
     ]
   }

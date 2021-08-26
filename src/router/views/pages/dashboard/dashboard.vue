@@ -1,9 +1,6 @@
 <script>
-import VuePerfectScrollbar from 'vue-perfect-scrollbar'
-
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
-
 
 export default {
 	page: {
