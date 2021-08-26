@@ -51,7 +51,7 @@
                     <div v-if="timerCount > 0">
                       <strong>Remaining Time {{timerCountInMinuteSecond}}</strong>
                     </div>
-                    <div  class="bottom_texts">
+                    <div v-else class="bottom_texts">
                         <p class="did_not_receive_code">Didn’t recieve the code, </p>
                         <p class="resend_code"><button data-toggle="modal" class="mr-3 resend-code" v-b-modal.modal-prevent-closing>Resend code</button></p>
                         <p class="call_instead"> <img height="20px" width="20px" src="../../assets/Calling.png" alt="calling" style="margin-right:10px"> Call instead</p>

@@ -28,18 +28,11 @@ router.beforeEach((routeTo, routeFrom, next) => {
   if (routeFrom.name !== null) {
     NProgress.start()
   }
-
+  // redirect home route
   const authRequired = routeTo.matched.some((route) => route.meta.authRequired)
   if (!authRequired) return next()
-  if (store.getters['auth/loggedIn']) {
-    // Validate the local user token...
-    return store.dispatch('auth/validate').then((validUser) => {
-      // Then continue if the token still represents a valid user,
-      // otherwise redirect to login.
-      validUser ? next() : redirectToLogin()
-    })
-  }
-
+  let loggedIn = store.getters['auth/currentUser']
+  if(loggedIn && loggedIn.token) return next();
   // If auth is required and the user is NOT currently logged in,
   // redirect to login.
   redirectToLogin()

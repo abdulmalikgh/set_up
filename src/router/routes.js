@@ -4,7 +4,7 @@ import store from '@state/store'
 const authRoutes = [
   {
     path: '/signin',
-    name: 'login',
+    name: 'signin',
     component: () => lazyLoadView(import('@src/views/accounts/SignIn.vue')),
     meta: {
       beforeResolve(routeTo, routeFrom, next) {
@@ -21,7 +21,7 @@ const authRoutes = [
   },
   {
     path: '/signup',
-    name: 'register',
+    name: 'signup',
     component: () => lazyLoadView(import('@src/views/accounts/SignUp.vue')),
     meta: {
       beforeResolve(routeTo, routeFrom, next) {
@@ -39,47 +39,27 @@ const authRoutes = [
   {
     path: '/verify-account',
     name: 'verify-account',
+    meta: { authRequired: true },
     component: () => lazyLoadView(import('@src/views/accounts/VerifyAccount.vue')),
     },
     {
       path: '/login-type',
       name: 'select-login-type',
-      component: () => lazyLoadView(import('@src/views/accounts/VerifyAccount.vue')),
+      meta: { authRequired: true },
+      component: () => lazyLoadView(import('@src/views/dashboard/LoginType.vue')),
       },
   {
     path: '/confirm-account',
     name: 'confirm-account',
     component: () => lazyLoadView(import('@src/views/accounts/ConfirmAccount.vue')),
-    meta: {
-      beforeResolve(routeTo, routeFrom, next) {
-        // If the user is already logged in
-        if (store.getters['auth/loggedIn']) {
-          // Redirect to the home page instead
-          next({ name: 'overview' })
-        } else {
-          // Continue to the login page
-          next()
-        }
-      },
-    },
+    meta: { authRequired: true },
   },
   {
     path: '/forget-password',
     name: 'forget-password',
     component: () =>
       lazyLoadView(import('@src/views/accounts/ResetPassword.vue')),
-    meta: {
-      beforeResolve(routeTo, routeFrom, next) {
-        // If the user is already logged in
-        if (store.getters['auth/loggedIn']) {
-          // Redirect to the home page instead
-          next({ name: '0verview' })
-        } else {
-          // Continue to the login page
-          next()
-        }
-      },
-    },
+    meta: { authRequired: true },
   },
   {
     path: '/logout',
@@ -133,7 +113,7 @@ const dashboardRoutes = [
     //   varient: 'success',
     // },
     component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
-    // meta: { authRequired: true },
+    meta: { authRequired: true },
     props: (route) => ({ user: store.state.auth.currentUser || {} }),
   },
 ]
@@ -144,7 +124,7 @@ const messagesRoutes = [
     name: 'Messages',
     icon: 'home',
     component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
-    // meta: { authRequired: true },
+    meta: { authRequired: true },
     props: (route) => ({ user: store.state.auth.currentUser || {} }),
   },
 ]
@@ -155,7 +135,7 @@ const contactRoutes = [
     name: 'Contacts',
     icon: 'home',
     component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
-    // meta: { authRequired: true },
+    meta: { authRequired: true },
     props: (route) => ({ user: store.state.auth.currentUser || {} }),
   },
 ]

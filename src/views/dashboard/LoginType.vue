@@ -11,14 +11,14 @@
 
                 <div class="Nnotify_login_type_inner_containr_card margin__right" @click="active = 'sms'" :class="[active == 'sms' ? 'active' :'']">
                     <div class="Nnotify_login_type_inner_containr_card_inner">
-                        <img src="../../assets/Messagemessage.svg" width="40" height="40" alt="">
+                        <!-- <img src="../../assets/Messagemessage.svg" width="40" height="40" alt=""> -->
                         <p class="send">send SMS messages</p>
                     </div>
                 </div>
 
                 <div class="Nnotify_login_type_inner_containr_card right_card"  :class="[active == 'voice' ? 'active' :'']" @click="active = 'voice'">
                     <div class="Nnotify_login_type_inner_containr_card_inner">
-                        <img src="../../assets/Messagemessage.svg" width="40" height="40" alt="">
+                        <!-- <img src="../../assets/Messagemessage.svg" width="40" height="40" alt=""> -->
                         <p class="send">Send voice calls</p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                         Set my option as default. This can be changed later in settings</p>
                 </div>
                 <div class="enter_container">
-                    <button class="enter" :class="[active != '' ? 'btn_active' : '']" :disabled="!active"> 
+                    <button @click="returnToDashboard" class="enter" :class="[active != '' ? 'btn_active' : '']" :disabled="!active"> 
                         Enter
                     </button>
                 </div>
@@ -42,6 +42,11 @@ export default {
     data() {
         return {
             active: ''
+        }
+    },
+    methods: {
+        returnToDashboard(){
+            this.$router.push('/overview')
         }
     }
 }
