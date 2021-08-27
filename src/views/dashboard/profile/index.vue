@@ -17,20 +17,6 @@ export default ({
 #account-settings{
   height:calc(100vh - 120px);
 }
-.profile-inner{
-    display: flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    margin-top:3rem;
-}
-
-.upload-information{
-    width:100%;
-    padding-top:1em;
-    display: flex;
-    justify-content:center;
-}
 ul{
     margin:0px!important;
     padding:0px!important;
@@ -54,12 +40,6 @@ ul li p{
     font-size: 10px;
     line-height: 140%;
     color: #979797;
-}
-@media screen and  (max-width:768px) and (min-width:400px) {
-    button{
-    width:240px;
-    height:38px;
-    }
 }
 a{
     color:normal;
