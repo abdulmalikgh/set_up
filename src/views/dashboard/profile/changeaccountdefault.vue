@@ -84,31 +84,7 @@ export default {
 				</div>
 			</div>
 			<div class="mnotify-card-body">
-				<div class="row profile-settings-form" style="margin-top:2em;">
-					<div class="col-sm-11 col-md-10 col-lg-5">
-						<p class="profile-see-more">See information about your account.</p>
-						<div class="profile-inner">
-							<el-form :model="formData" :rules="rules" ref="ruleForm">
-								<div class="form_input_container">
-									<el-form-item label="Current Phone Number" prop="old_phone_number">
-									<el-input type="text" autocomplete="off" placeholder="Current Phone Number"  v-model="currentUser"></el-input>
-									</el-form-item>
-								</div>
-								<div class="form_input_container">
-									<el-form-item label="New Phone Number" prop="phone">
-									<el-input  type="text" autocomplete="off" placeholder="New Phone Number"  v-model="formData.phone"></el-input>
-									</el-form-item>
-								</div>
-								<Alert v-if="errors" :message="errors" :type="type" />
-								<div class="terms_and_conditons_container mt-5">
-									<el-form-item>
-									<el-button  id="mNotify_form_submit_btn" :loading="loading" type="primary" @click="submitForm('ruleForm')">Change Number</el-button>
-									</el-form-item>
-								</div>
-							</el-form>
-						</div>
-					</div>
-				</div>
+		
 			</div>
 		</div>
     </div>

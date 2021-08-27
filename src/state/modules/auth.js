@@ -96,6 +96,26 @@ reActivateAccount({commit}, data) {
            }).catch( err => reject(err))
   })
 },
+updatePassword({commit}, data) {
+  return new Promise( (resolve, reject) => {
+       apiService.post('api/update/password',data)
+           .then( response => {
+               if(response) {
+               }
+               resolve(response)
+           }).catch( err => reject(err))
+  })
+},
+updatePhone({commit}, data) {
+  return new Promise( (resolve, reject) => {
+       apiService.post('api/update/phone',data)
+           .then( response => {
+               if(response) {
+               }
+               resolve(response)
+           }).catch( err => reject(err))
+  })
+},
  logout({commit}) {
      return new Promise( (resolve, reject) => {
          commit("LOGOUT")

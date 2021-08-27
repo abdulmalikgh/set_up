@@ -8,7 +8,8 @@ export default {
 	},
 	data() {
 	return {
-            
+           language:'english',
+		   color:'#f9aa4d' 
 		}
 	},
 	methods: {
@@ -34,12 +35,25 @@ export default {
     background: transparent;
     border:5px;
 }
-.changelanguage button:hover, .active{
-    background: #F7921C;
-    opacity: 0.05;
+.changelanguage button:hover{
+    background: #fffaf4;
+	transition: all 0.5s;
+}
+.active{
+	background: #fffaf4!important;
 }
 .changelanguage button p{
     margin-bottom:0px!important;
+}
+.__text{
+	width:100%;
+	margin-bottom:0px!important;
+	display: flex;
+	justify-content:space-between;
+}
+.feather__icon{
+	color:#f9aa4d!important;
+    fill:rgba( #f9aa4d,0)!important;
 }
 </style>
 <template>
@@ -60,13 +74,13 @@ export default {
 						<p class="profile-see-more">please select your preferred language</p>
 						<div class="profile-inner">
 							<div class="changelanguage">
-                            <button>
+                            <button @click="language = 'english'" :class="[language === 'english' ? 'active' : '']">
                                 <img  height="16" width="21" class="mr-3" src="@assets/english.png" alt="english">	
-                                <p class="align-middle">English</p>
+                                <p class="__text">English <span><feather class="feather__icon" v-if="language === 'english'"  size="18" type="check"></feather></span> </p>
                             </button>
-                            <button>
+                            <button @click="language = 'french'" :class="[language === 'french' ? 'active' : '']">
                                 <img height="16" width="21" class="mr-3" src="@src/assets/french.png" alt="french">
-                                <p class="align-middle">French</p>
+                                <p class="__text">French <span><feather  class="feather__icon" v-if="language === 'french'" size="18"  type="check"></feather></span></p>
                             </button>
                             </div>
 						</div>

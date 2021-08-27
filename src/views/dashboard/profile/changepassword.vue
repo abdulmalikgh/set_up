@@ -1,5 +1,7 @@
 <script>
 import appConfig from '@src/app.config'
+import store from '@state/store'
+
 export default {
 	page: {
 		title: 'change password',
@@ -24,7 +26,7 @@ export default {
 			password_confirmation:""
 		},
 		rules: {
-			old_phone_number: [
+			old_password: [
 				{required: true, message: 'Current password is required.', trigger: 'change' },
 			],
 			password: [
@@ -48,7 +50,7 @@ export default {
 
          this.$refs[formName].validate((valid) => {
           if (valid) {
-            store.dispatch('auth/login', this.formData)
+            store.dispatch('auth/updatePassword', this.formData)
               .then( response => {
                 this.loading = false
                 this.$notify({
@@ -56,7 +58,7 @@ export default {
                     message: response.data.message,
                     type: 'success'
                   });
-                this.$router.push('/overview');
+                this.$router.push('/profile-settings');
               })
               .catch( err => {
                 this.loading = false
@@ -112,7 +114,7 @@ export default {
 									</el-form-item>
 								</div>
 								<div class="form_input_container">
-									<el-form-item label="Confirm Password" prop="password">
+									<el-form-item label="Confirm Password" prop="password_confirmation">
 									<el-input type="password" autocomplete="off" placeholder="Confirm Password"  v-model="formData.password_confirmation"></el-input>
 									</el-form-item>
 								</div>
