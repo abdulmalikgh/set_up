@@ -139,6 +139,18 @@ const profileSettingsRoutes = [
         name:'changepassword',
         meta: {authRequired: true},
         component: () => lazyLoadView(import('@src/views/dashboard/profile/changepassword.vue')),
+      },
+      {
+        path:'/change-phone-number',
+        name:'changephonenumber',
+        meta: {authRequired: true},
+        component: () => lazyLoadView(import('@src/views/dashboard/profile/changenumber.vue')),
+      },
+      {
+        path:'/change-language',
+        name:'changlanguage',
+        meta: {authRequired: true},
+        component: () => lazyLoadView(import('@src/views/dashboard/profile/changelanguage.vue')),
       }
     ]
   }

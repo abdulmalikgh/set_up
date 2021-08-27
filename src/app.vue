@@ -506,6 +506,28 @@ letter-spacing: 0em;
   width:100%;
   height:100%;
 }
+// profile settings form
+.profile-settings-form{
+  margin-left: 40px;
+  margin-top: 3em;
+}
+.profile-description{
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 11px;
+	color: #484A4F;
+}
+.profile-settings-section-header{
+	display: flex;
+}
+.profile-see-more{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 13px;
+	color: #484A4F;
+}
+
 /* SMALLER SCREEN */
 @media screen and (max-width: 768px) {
   #mNotify__form_image_container{
@@ -519,6 +541,15 @@ letter-spacing: 0em;
     justify-content: center;
     align-items: center;
   }
+   .page__padding{
+    margin-top:1em;
+    margin-right:1em;
+    margin-left:1em;
+  }
+  .profile-settings-form{
+    margin-left:0px;
+    margin-top: 2em;
+  }
 }
 @media screen and (max-width:500px) {
     .mNotify__form_fields_inner_container{
@@ -527,12 +558,5 @@ letter-spacing: 0em;
     .mNotify__form_fields_inner_container{
         width:80%!important;
     }
-}
-@media screen and (max-width:768px) {
-  .page__padding{
-    margin-top:1em;
-    margin-right:1em;
-    margin-left:1em;
-  }
 }
 </style>

@@ -13,7 +13,7 @@ export default ({
     }
 })
 </script>
-<style scopde  lang="scss">
+<style scoped  lang="scss">
 #account-settings{
   height:calc(100vh - 120px);
 }
@@ -64,7 +64,7 @@ a{
                         </router-link>
                         </li>
                         <li>
-                            <router-link to="#">
+                            <router-link to="/change-phone-number">
                                 <div>
                                     <h3 class="header">Change Number <feather size="18" style="fill:#484A4F; float:right" type="arrow-right"></feather></h3>
                                     <p class="text">change the phone number associated with account</p>
@@ -72,7 +72,7 @@ a{
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="#">
+                            <router-link to="/change-language">
                                 <div>
                                     <h3 class="header">Language settings <feather size="18" style="fill:#484A4F; float:right" type="arrow-right"></feather></h3>
                                     <p class="text">Change the language</p>

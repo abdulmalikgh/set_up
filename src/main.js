@@ -19,8 +19,9 @@ import flatPickr from 'vue-flatpickr-component'
 import '@fortawesome/fontawesome-free/css/all.css'    
 import '@fortawesome/fontawesome-free/js/all.js'    
 import Alert from "@src/components/global/Alert.vue"
-
+import profilesettingsbtn from '@src/components/global/profilesettingsbtn.vue'
 Vue.component('Alert', Alert)
+Vue.component('profilesettingsbtn', profilesettingsbtn)
 Vue.use(VueFeather)
 Vue.use(flatPickr)
 Vue.use(ElementUI, { locale })

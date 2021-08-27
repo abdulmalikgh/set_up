@@ -99,7 +99,10 @@ export default {
               })
               .catch( err => {
                 this.loading = false
-                if(err.response.status === 404) {
+                if(err.response.data == undefined) {
+                  this.errors = ['Network error try again']
+                }
+                if(err.response && err.response.status === 404) {
                   this.errors = err.response.data.data.error;
                 }
               })
