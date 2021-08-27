@@ -1,6 +1,5 @@
 <script>
 import appConfig from '@src/app.config'
-
 export default {
 	page: {
 		title: 'change password',
