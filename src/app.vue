@@ -28,6 +28,9 @@ body{
   margin:0;
   background:#fbfbfb!important;
 }
+p{
+  margin-bottom:0px!important;
+}
 @import '@design';
 //CUSTOM MNOTIFY GLOBAL CSS
 .description{
@@ -527,7 +530,16 @@ letter-spacing: 0em;
 	line-height: 13px;
 	color: #484A4F;
 }
-
+// MODAL
+.modal-header{
+    border-bottom:1px solid #F3F3F4;
+    margin-right:15px;
+    margin-left: 15px;
+    padding-left: 0!important;
+}
+// .modal-body{
+//     min-height:60vh !important;
+// }
 /* SMALLER SCREEN */
 @media screen and (max-width: 768px) {
   #mNotify__form_image_container{

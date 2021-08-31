@@ -99,7 +99,7 @@ export default {
 				</div>
 			</div>
 			<div class="mnotify-card-body">
-				<div class="row profile-settings-form">
+				<div class="row profile-settings-form" style="margin-top:2em;">
 					<div class="col-sm-11 col-md-10 col-lg-5">
 						<div class="profile-inner">
 							<el-form :model="formData" :rules="rules" ref="ruleForm">

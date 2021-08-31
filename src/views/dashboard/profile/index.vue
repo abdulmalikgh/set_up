@@ -42,7 +42,7 @@ ul li p{
     color: #979797;
 }
 a{
-    color:normal;
+    color:normal;   
     text-decoration:none;   
 }
 </style>
@@ -50,7 +50,7 @@ a{
     <div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
         <div id="account-settings" class="mnotify-card">
             <div  id="side-indicators-content" class="mnotify-card-header">
-                <h3 class="mnotify-card-header-text py-0 my-0">Billing summary</h3>
+                <h3 class="mnotify-card-header-text py-0 my-0">Account Settings</h3>
             </div>
             <div class="mnotify-card-body">
                 <div class="billing-card-inner">
@@ -80,15 +80,15 @@ a{
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="#">
+                            <router-link to="/email-and-notification">
                                 <div>
                                     <h3 class="header">Email and SMS Notification <feather size="18" style="fill:#484A4F; float:right" type="arrow-right"></feather></h3>
-                                    <p class="text">Set email all notifications</p>
+                                    <p class="text">Set email and all notifications</p>
                                 </div>
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="#">
+                            <router-link to="/default-account-settings">
                                 <div>
                                     <h3 class="header">Account Defaults<feather size="18" style="fill:#484A4F; float:right" type="arrow-right"></feather></h3>
                                     <p class="text">Change account defaults settings</p>

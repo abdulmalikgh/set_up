@@ -71,7 +71,7 @@ export default {
 			<div class="mnotify-card-body">
 				<div class="row profile-settings-form" style="margin-top:2em;">
 					<div class="col-sm-11 col-md-10 col-lg-5">
-						<p class="profile-see-more">please select your preferred language</p>
+						<p class="profile-see-more pb-4">please select your preferred language</p>
 						<div class="profile-inner">
 							<div class="changelanguage">
                             <button @click="language = 'english'" :class="[language === 'english' ? 'active' : '']">

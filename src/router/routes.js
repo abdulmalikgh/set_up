@@ -151,6 +151,18 @@ const profileSettingsRoutes = [
         name:'changlanguage',
         meta: {authRequired: true},
         component: () => lazyLoadView(import('@src/views/dashboard/profile/changelanguage.vue')),
+      },
+      {
+        path:'/email-and-notification',
+        name:'emailandnotification',
+        meta: {authRequired: true},
+        component: () => lazyLoadView(import('@src/views/dashboard/profile/emailandnotifications.vue')),
+      },
+      {
+        path:'/default-account-settings',
+        name:'changlanguage',
+        meta: {authRequired: true},
+        component: () => lazyLoadView(import('@src/views/dashboard/profile/changeaccountdefault.vue')),
       }
     ]
   }

@@ -8,6 +8,8 @@ import './assets/style/theme/index.css'
 import ElementUI from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/en'
 import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import VueApexCharts from 'vue-apexcharts'
 import Vuelidate from 'vuelidate'
 import VueMask from 'v-mask'

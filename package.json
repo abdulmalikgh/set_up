@@ -27,7 +27,6 @@
     "docs": "vuepress dev"
   },
   "dependencies": {
-    "element-ui": "^2.15.5",
     "@fullcalendar/bootstrap": "^4.3.0",
     "@fullcalendar/core": "^4.3.1",
     "@fullcalendar/daygrid": "^4.3.0",
@@ -41,7 +40,9 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.3",
     "core-js": "^2.6.5",
+    "element-ui": "^2.15.5",
     "feather-icons": "^4.24.1",
+    "jquery": "^3.6.0",
     "lodash": "4.17.11",
     "metismenujs": "^1.1.0",
     "v-click-outside": "^2.1.3",
